@@ -1,0 +1,46 @@
+|StepperMotor
+GPIO0 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+DIR_SW[17] => inst1.IN1
+DIR_SW[17] => inst4.IN0
+clk => SteperMotor:inst14.clk
+GPIO2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+GPIO4 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+GPIO6 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[4] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StepperMotor|SteperMotor:inst14
+clk => clk_OUT~reg0.CLK
+clk => \compteur:count[0].CLK
+clk => \compteur:count[1].CLK
+clk => \compteur:count[2].CLK
+clk => \compteur:count[3].CLK
+clk => \compteur:count[4].CLK
+clk => \compteur:count[5].CLK
+clk => \compteur:count[6].CLK
+clk => \compteur:count[7].CLK
+clk => \compteur:count[8].CLK
+clk => \compteur:count[9].CLK
+clk => \compteur:count[10].CLK
+clk => \compteur:count[11].CLK
+clk => \compteur:count[12].CLK
+clk => \compteur:count[13].CLK
+clk => \compteur:count[14].CLK
+clk => \compteur:count[15].CLK
+clk => \compteur:count[16].CLK
+clk => \compteur:count[17].CLK
+clk => \compteur:count[18].CLK
+clk => \compteur:count[19].CLK
+clk => \compteur:count[20].CLK
+clk => \compteur:count[21].CLK
+clk => \compteur:count[22].CLK
+clk => \compteur:count[23].CLK
+clk => \compteur:count[24].CLK
+clk => \compteur:count[25].CLK
+led_cathode <= <GND>
+clk_OUT <= clk_OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

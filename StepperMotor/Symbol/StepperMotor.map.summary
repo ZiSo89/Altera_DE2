@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 11 22:09:43 2014
+Quartus II Version : 7.0 Build 33 02/05/2007 SJ Full Version
+Revision Name : StepperMotor
+Top-level Entity Name : StepperMotor
+Family : Cyclone II
+Total logic elements : 44
+    Total combinational functions : 44
+    Dedicated logic registers : 29
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

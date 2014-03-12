@@ -1,0 +1,239 @@
+TimeQuest Timing Analyzer report for StepperMotor
+Tue Mar 11 22:10:05 2014
+Quartus II Version 7.0 Build 33 02/05/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. SDC File List
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Minimum Pulse Width
+  9. Setup Transfers
+ 10. Hold Transfers
+ 11. Unconstrained Paths
+ 12. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                    ;
++--------------------+-------------------------------------------------+
+; Quartus II Version ; Version 7.0 Build 33 02/05/2007 SJ Full Version ;
+; Revision Name      ; StepperMotor                                    ;
+; Device Family      ; Cyclone II                                      ;
+; Device Name        ; EP2C35F672C6                                    ;
+; Timing Models      ; Final                                           ;
+; Delay Model        ; Slow Model                                      ;
+; Rise/Fall Delays   ; Unavailable                                     ;
++--------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; SDC File List                                                                            ;
++------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                        ; Status ; Read at                  ;
++------------------------------------------------------+--------+--------------------------+
+; C:/ALTERA/Altera/Project/MY/SteperM/StepperMotor.sdc ; OK     ; Tue Mar 11 22:10:04 2014 ;
++------------------------------------------------------+--------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                    ;
++----------------------------+------+--------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; Clock Name                 ; Type ; Period ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                        ;
++----------------------------+------+--------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; clk                        ; Base ; 1.000  ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                        ;
+; SteperMotor:inst14|clk_OUT ; Base ; 1.000  ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SteperMotor:inst14|clk_OUT } ;
++----------------------------+------+--------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+
+
++-----------------------------------------+
+; Fmax Summary                            ;
++------------+----------------------------+
+; Fmax (MHz) ; Clock Name                 ;
++------------+----------------------------+
+; 283.13     ; clk                        ;
+; 1326.26    ; SteperMotor:inst14|clk_OUT ;
++------------+----------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------+
+; Setup Summary                                       ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clk                        ; -2.532 ; -65.274       ;
+; SteperMotor:inst14|clk_OUT ; 0.246  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Hold Summary                                       ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; SteperMotor:inst14|clk_OUT ; 0.524 ; 0.000         ;
+; clk                        ; 0.794 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width                                                                                                               ;
++--------+--------------+----------------+-------+----------------------------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Pulse ; Clock                      ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+-------+----------------------------+------------+----------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; SteperMotor:inst14|clk_OUT ; Rise       ; inst5                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; SteperMotor:inst14|clk_OUT ; Rise       ; inst5                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|\compteur:count[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; clk                        ; Rise       ; SteperMotor:inst14|clk_OUT             ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; clk                        ; Rise       ; SteperMotor:inst14|clk_OUT             ;
+; -0.500 ; 0.500        ; 1.000          ; High  ; SteperMotor:inst14|clk_OUT ; Rise       ; inst6                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low   ; SteperMotor:inst14|clk_OUT ; Rise       ; inst6                                  ;
++--------+--------------+----------------+-------+----------------------------+------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                     ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; clk                        ; clk                        ; 884      ; 0        ; 0        ; 0        ;
+; SteperMotor:inst14|clk_OUT ; SteperMotor:inst14|clk_OUT ; 2        ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                      ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; clk                        ; clk                        ; 884      ; 0        ; 0        ; 0        ;
+; SteperMotor:inst14|clk_OUT ; SteperMotor:inst14|clk_OUT ; 2        ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 7.0 Build 33 02/05/2007 SJ Full Version
+    Info: Processing started: Tue Mar 11 22:10:04 2014
+Info: Command: quartus_sta StepperMotor -c StepperMotor
+Info: qsta_default_script.tcl version: 23.0.1.4
+Info: Reading SDC File: 'C:/ALTERA/Altera/Project/MY/SteperM/StepperMotor.sdc'
+Info: No base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -waveform {0.000 0.500} -name clk clk
+    Info: create_clock -period 1.000 -waveform {0.000 0.500} -name SteperMotor:inst14|clk_OUT SteperMotor:inst14|clk_OUT
+Info: Worst-case setup slack is -2.532
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.532       -65.274 clk 
+    Info:     0.246         0.000 SteperMotor:inst14|clk_OUT 
+Info: Worst-case hold slack is 0.524
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.524         0.000 SteperMotor:inst14|clk_OUT 
+    Info:     0.794         0.000 clk 
+Info: No recovery paths to report
+Info: No removal paths to report
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Allocated 102 megabytes of memory during processing
+    Info: Processing ended: Tue Mar 11 22:10:05 2014
+    Info: Elapsed time: 00:00:01
+
+

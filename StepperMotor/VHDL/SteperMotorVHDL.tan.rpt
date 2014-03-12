@@ -1,0 +1,362 @@
+Classic Timing Analyzer report for SteperMotorVHDL
+Tue Mar 11 21:15:55 2014
+Quartus II Version 7.0 Build 33 02/05/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clk'
+  6. tco
+  7. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                   ;
++------------------------------+-------+---------------+----------------------------------+---------------------+--------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                ; To                 ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------+--------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 8.049 ns                         ; gpio[1]~reg0        ; gpio[1]            ; clk        ; --       ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 277.85 MHz ( period = 3.599 ns ) ; \compteur:count[15] ; \compteur:count[0] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                     ;                    ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------+--------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                    ;
++-----------------------------------------+-----------------------------------------------------+---------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                ; To                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 277.85 MHz ( period = 3.599 ns )                    ; \compteur:count[15] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 3.374 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[15] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[14] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[23] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[22] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[21] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[20] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[13] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[19] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[18] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[17] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; \compteur:count[15] ; \compteur:count[16] ; clk        ; clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 294.90 MHz ( period = 3.391 ns )                    ; \compteur:count[0]  ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 3.188 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; \compteur:count[15] ; gpio[0]~reg0        ; clk        ; clk      ; None                        ; None                      ; 3.148 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; \compteur:count[15] ; gpio[1]~reg0        ; clk        ; clk      ; None                        ; None                      ; 3.148 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; \compteur:count[15] ; gpio[2]~reg0        ; clk        ; clk      ; None                        ; None                      ; 3.148 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; \compteur:count[15] ; gpio[3]~reg0        ; clk        ; clk      ; None                        ; None                      ; 3.148 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; \compteur:count[16] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 3.106 ns                ;
+; N/A                                     ; 301.20 MHz ( period = 3.320 ns )                    ; \compteur:count[0]  ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 3.117 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; \compteur:count[11] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 304.79 MHz ( period = 3.281 ns )                    ; \compteur:count[1]  ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 3.078 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; \compteur:count[10] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A                                     ; 307.69 MHz ( period = 3.250 ns )                    ; \compteur:count[2]  ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 3.047 ns                ;
+; N/A                                     ; 307.79 MHz ( period = 3.249 ns )                    ; \compteur:count[0]  ; \compteur:count[23] ; clk        ; clk      ; None                        ; None                      ; 3.046 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; \compteur:count[12] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 311.53 MHz ( period = 3.210 ns )                    ; \compteur:count[1]  ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 3.007 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[21] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 312.70 MHz ( period = 3.198 ns )                    ; \compteur:count[19] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 314.56 MHz ( period = 3.179 ns )                    ; \compteur:count[3]  ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 2.976 ns                ;
+; N/A                                     ; 314.56 MHz ( period = 3.179 ns )                    ; \compteur:count[2]  ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 2.976 ns                ;
+; N/A                                     ; 314.66 MHz ( period = 3.178 ns )                    ; \compteur:count[0]  ; \compteur:count[22] ; clk        ; clk      ; None                        ; None                      ; 2.975 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; \compteur:count[24] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 2.952 ns                ;
+; N/A                                     ; 318.57 MHz ( period = 3.139 ns )                    ; \compteur:count[1]  ; \compteur:count[23] ; clk        ; clk      ; None                        ; None                      ; 2.936 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[15] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[14] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[23] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[22] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[21] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[20] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[13] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[19] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[18] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[17] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 320.00 MHz ( period = 3.125 ns )                    ; \compteur:count[16] ; \compteur:count[16] ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[15] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[14] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[3]  ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[23] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[2]  ; \compteur:count[23] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[22] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[21] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[20] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[13] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[19] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[18] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[17] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.75 MHz ( period = 3.108 ns )                    ; \compteur:count[11] ; \compteur:count[16] ; clk        ; clk      ; None                        ; None                      ; 2.905 ns                ;
+; N/A                                     ; 321.85 MHz ( period = 3.107 ns )                    ; \compteur:count[0]  ; \compteur:count[21] ; clk        ; clk      ; None                        ; None                      ; 2.904 ns                ;
+; N/A                                     ; 323.21 MHz ( period = 3.094 ns )                    ; \compteur:count[16] ; gpio[0]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.880 ns                ;
+; N/A                                     ; 323.21 MHz ( period = 3.094 ns )                    ; \compteur:count[16] ; gpio[1]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.880 ns                ;
+; N/A                                     ; 323.21 MHz ( period = 3.094 ns )                    ; \compteur:count[16] ; gpio[2]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.880 ns                ;
+; N/A                                     ; 323.21 MHz ( period = 3.094 ns )                    ; \compteur:count[16] ; gpio[3]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.880 ns                ;
+; N/A                                     ; 324.99 MHz ( period = 3.077 ns )                    ; \compteur:count[11] ; gpio[0]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.874 ns                ;
+; N/A                                     ; 324.99 MHz ( period = 3.077 ns )                    ; \compteur:count[11] ; gpio[1]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.874 ns                ;
+; N/A                                     ; 324.99 MHz ( period = 3.077 ns )                    ; \compteur:count[11] ; gpio[2]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.874 ns                ;
+; N/A                                     ; 324.99 MHz ( period = 3.077 ns )                    ; \compteur:count[11] ; gpio[3]~reg0        ; clk        ; clk      ; None                        ; None                      ; 2.874 ns                ;
+; N/A                                     ; 325.52 MHz ( period = 3.072 ns )                    ; \compteur:count[4]  ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 2.869 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[11] ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[12] ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[10] ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[9]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[8]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[7]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[6]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[5]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.63 MHz ( period = 3.071 ns )                    ; \compteur:count[18] ; \compteur:count[0]  ; clk        ; clk      ; None                        ; None                      ; 2.846 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[15] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[25] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[14] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[24] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[23] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[22] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[21] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[20] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[13] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[19] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[18] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[17] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; \compteur:count[10] ; \compteur:count[16] ; clk        ; clk      ; None                        ; None                      ; 2.866 ns                ;
+; N/A                                     ; 325.95 MHz ( period = 3.068 ns )                    ; \compteur:count[1]  ; \compteur:count[22] ; clk        ; clk      ; None                        ; None                      ; 2.865 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; \compteur:count[17] ; \compteur:count[4]  ; clk        ; clk      ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; \compteur:count[17] ; \compteur:count[3]  ; clk        ; clk      ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; \compteur:count[17] ; \compteur:count[2]  ; clk        ; clk      ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; \compteur:count[17] ; \compteur:count[1]  ; clk        ; clk      ; None                        ; None                      ; 2.840 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                     ;                     ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------+
+; tco                                                                         ;
++-------+--------------+------------+----------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From           ; To        ; From Clock ;
++-------+--------------+------------+----------------+-----------+------------+
+; N/A   ; None         ; 8.049 ns   ; gpio[1]~reg0   ; gpio[1]   ; clk        ;
+; N/A   ; None         ; 7.997 ns   ; gpio[0]~reg0   ; gpio[0]   ; clk        ;
+; N/A   ; None         ; 7.975 ns   ; gpio[3]~reg0   ; gpio[3]   ; clk        ;
+; N/A   ; None         ; 7.957 ns   ; gpio[2]~reg0   ; gpio[2]   ; clk        ;
+; N/A   ; None         ; 6.864 ns   ; led_anode~reg0 ; led_anode ; clk        ;
+; N/A   ; None         ; 6.645 ns   ; gpio[2]~reg0   ; phase[2]  ; clk        ;
+; N/A   ; None         ; 6.645 ns   ; gpio[1]~reg0   ; phase[1]  ; clk        ;
+; N/A   ; None         ; 6.639 ns   ; gpio[0]~reg0   ; phase[0]  ; clk        ;
+; N/A   ; None         ; 6.607 ns   ; gpio[3]~reg0   ; phase[3]  ; clk        ;
++-------+--------------+------------+----------------+-----------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.0 Build 33 02/05/2007 SJ Full Version
+    Info: Processing started: Tue Mar 11 21:15:55 2014
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off SteperMotorVHDL -c SteperMotorVHDL --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 277.85 MHz between source register "\compteur:count[15]" and destination register "\compteur:count[11]" (period= 3.599 ns)
+    Info: + Longest register to register delay is 3.374 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X64_Y9_N5; Fanout = 3; REG Node = '\compteur:count[15]'
+        Info: 2: + IC(0.524 ns) + CELL(0.398 ns) = 0.922 ns; Loc. = LCCOMB_X63_Y9_N10; Fanout = 2; COMB Node = 'led_anode~505'
+        Info: 3: + IC(0.254 ns) + CELL(0.150 ns) = 1.326 ns; Loc. = LCCOMB_X63_Y9_N14; Fanout = 1; COMB Node = 'gpio[0]~363'
+        Info: 4: + IC(0.256 ns) + CELL(0.271 ns) = 1.853 ns; Loc. = LCCOMB_X63_Y9_N2; Fanout = 1; COMB Node = 'gpio[0]~365'
+        Info: 5: + IC(0.245 ns) + CELL(0.150 ns) = 2.248 ns; Loc. = LCCOMB_X63_Y9_N0; Fanout = 31; COMB Node = 'gpio[0]~369'
+        Info: 6: + IC(0.616 ns) + CELL(0.510 ns) = 3.374 ns; Loc. = LCFF_X64_Y10_N29; Fanout = 4; REG Node = '\compteur:count[11]'
+        Info: Total cell delay = 1.479 ns ( 43.84 % )
+        Info: Total interconnect delay = 1.895 ns ( 56.16 % )
+    Info: - Smallest clock skew is -0.011 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.617 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 33; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.988 ns) + CELL(0.537 ns) = 2.617 ns; Loc. = LCFF_X64_Y10_N29; Fanout = 4; REG Node = '\compteur:count[11]'
+            Info: Total cell delay = 1.516 ns ( 57.93 % )
+            Info: Total interconnect delay = 1.101 ns ( 42.07 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.628 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 33; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.999 ns) + CELL(0.537 ns) = 2.628 ns; Loc. = LCFF_X64_Y9_N5; Fanout = 3; REG Node = '\compteur:count[15]'
+            Info: Total cell delay = 1.516 ns ( 57.69 % )
+            Info: Total interconnect delay = 1.112 ns ( 42.31 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tco from clock "clk" to destination pin "gpio[1]" through register "gpio[1]~reg0" is 8.049 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.628 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.113 ns) + CELL(0.000 ns) = 1.092 ns; Loc. = CLKCTRL_G11; Fanout = 33; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.999 ns) + CELL(0.537 ns) = 2.628 ns; Loc. = LCFF_X63_Y9_N31; Fanout = 2; REG Node = 'gpio[1]~reg0'
+        Info: Total cell delay = 1.516 ns ( 57.69 % )
+        Info: Total interconnect delay = 1.112 ns ( 42.31 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.171 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X63_Y9_N31; Fanout = 2; REG Node = 'gpio[1]~reg0'
+        Info: 2: + IC(2.585 ns) + CELL(2.586 ns) = 5.171 ns; Loc. = PIN_E26; Fanout = 0; PIN Node = 'gpio[1]'
+        Info: Total cell delay = 2.586 ns ( 50.01 % )
+        Info: Total interconnect delay = 2.585 ns ( 49.99 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Allocated 103 megabytes of memory during processing
+    Info: Processing ended: Tue Mar 11 21:15:55 2014
+    Info: Elapsed time: 00:00:00
+
+

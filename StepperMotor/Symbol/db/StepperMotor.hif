@@ -1,0 +1,103 @@
+Version 7.0 Build 33 02/05/2007 SJ Full Version
+11
+867
+OFF
+OFF
+OFF
+OFF
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+..|..|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+7486
+# storage
+db|StepperMotor.(1).cnf
+db|StepperMotor.(1).cnf
+# case_insensitive
+# source_file
+..|..|..|..|70|quartus|libraries|others|maxplus2|7486.bdf
+66760dceba984b0dca8067dd21fcf
+24
+# end
+# entity
+simple_counter
+# storage
+db|StepperMotor.(2).cnf
+db|StepperMotor.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+simple_counter.v
+d2138af5e9ca359f228a77dd6e12e4b1
+7
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# end
+# entity
+74157
+# storage
+db|StepperMotor.(3).cnf
+db|StepperMotor.(3).cnf
+# case_insensitive
+# source_file
+..|..|..|..|70|quartus|libraries|others|maxplus2|74157.bdf
+fece847d7764ed8f1d301bff92412e91
+24
+# end
+# entity
+SteperMotor
+# storage
+db|StepperMotor.(4).cnf
+db|StepperMotor.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+StepperMotor.vhd
+4e70a57c8a96fcd2d14e3cc1612d3f
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+SteperMotor:inst14
+}
+# end
+# entity
+StepperMotor
+# storage
+db|StepperMotor.(0).cnf
+db|StepperMotor.(0).cnf
+# case_insensitive
+# source_file
+StepperMotor.bdf
+c33b9680d191bfdaab3519bb9dda0
+24
+# hierarchies {
+|
+}
+# end
+# complete
+

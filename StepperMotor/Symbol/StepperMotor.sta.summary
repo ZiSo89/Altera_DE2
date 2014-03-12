@@ -1,0 +1,21 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk'
+Slack : -2.532
+TNS   : -65.274
+
+Type  : Setup 'SteperMotor:inst14|clk_OUT'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Hold 'SteperMotor:inst14|clk_OUT'
+Slack : 0.524
+TNS   : 0.000
+
+Type  : Hold 'clk'
+Slack : 0.794
+TNS   : 0.000
+
+------------------------------------------------------------
